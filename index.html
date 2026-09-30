@@ -14,7 +14,8 @@
       box-sizing: border-box;
     }
 
-    html, body {
+    html,
+    body {
       width: 100%;
       min-height: 100%;
     }
@@ -23,34 +24,34 @@
       min-height: 100vh;
       font-family: Arial, Helvetica, sans-serif;
       color: #fff;
+
       background:
         radial-gradient(
-          circle at 20% 20%,
-          rgba(0, 200, 255, 0.20),
-          transparent 38%
+          circle at 15% 18%,
+          rgba(0, 210, 255, 0.24),
+          transparent 36%
         ),
         radial-gradient(
-          circle at 82% 78%,
-          rgba(255, 0, 128, 0.18),
-          transparent 40%
+          circle at 85% 76%,
+          rgba(255, 0, 130, 0.22),
+          transparent 38%
         ),
         linear-gradient(
           135deg,
-          #031018 0%,
-          #02050b 45%,
-          #09030d 70%,
+          #020b11 0%,
+          #02050a 45%,
+          #07030b 68%,
           #160014 100%
         );
 
-      display: flex;
-      align-items: center;
-      justify-content: center;
       overflow-x: hidden;
     }
 
     .page {
+      position: relative;
+      z-index: 2;
+
       width: 100%;
-      max-width: 1200px;
       min-height: 100vh;
 
       display: flex;
@@ -61,200 +62,233 @@
       text-align: center;
 
       padding: 35px 20px 25px;
-      position: relative;
-      z-index: 2;
     }
 
-    /* LOGO */
+    /* ========================================
+       LOGO
+       ======================================== */
 
-    .logo-wrapper {
-      width: 210px;
-      height: 210px;
-      margin-bottom: 12px;
+    .logo {
+      width: 225px;
+      height: auto;
 
-      border-radius: 42px;
-      overflow: hidden;
-
-      box-shadow:
-        0 0 35px rgba(0, 215, 255, 0.15),
-        0 0 45px rgba(255, 0, 128, 0.10);
-    }
-
-    .logo-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
       display: block;
+
+      margin: 0 auto 12px;
+
+      border: none;
+      outline: none;
+      border-radius: 0;
+
+      box-shadow: none;
+
+      object-fit: contain;
     }
 
-    /* BRAND */
+    /* ========================================
+       BIMOBOND
+       ======================================== */
 
     .brand {
-      font-size: clamp(58px, 7vw, 92px);
-      font-weight: 800;
+      display: inline-block;
+
+      font-size: clamp(62px, 7vw, 96px);
+      font-weight: 900;
       line-height: 1;
-      letter-spacing: -4px;
-      margin-bottom: 34px;
-    }
 
-    .brand .bimo {
-      color: #ffffff;
-    }
+      letter-spacing: -5px;
 
-    .brand .bond {
+      margin-bottom: 35px;
+
       background: linear-gradient(
         90deg,
-        #00dfff 0%,
-        #168cff 30%,
-        #8d4cff 60%,
-        #ff1493 100%
+        #00e5ff 0%,
+        #009cff 20%,
+        #3768ff 40%,
+        #824cff 62%,
+        #d72ac8 80%,
+        #ff008c 100%
       );
 
       -webkit-background-clip: text;
       background-clip: text;
+
       -webkit-text-fill-color: transparent;
       color: transparent;
     }
 
-    /* COMING SOON BADGE */
+    /* ========================================
+       COMING SOON
+       ======================================== */
 
     .badge {
       display: inline-flex;
       align-items: center;
       justify-content: center;
 
-      min-width: 200px;
-      height: 48px;
+      min-width: 255px;
+      height: 51px;
 
-      padding: 0 28px;
+      padding: 0 32px;
 
-      border: 1px solid rgba(255, 255, 255, 0.20);
+      margin-bottom: 27px;
+
+      border: 1px solid rgba(255, 255, 255, 0.22);
       border-radius: 30px;
 
       background: rgba(255, 255, 255, 0.025);
 
-      color: #c2c8d4;
+      color: #d4d8e1;
 
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 500;
-      letter-spacing: 5px;
 
-      margin-bottom: 28px;
+      letter-spacing: 6px;
     }
 
-    /* HEADLINE */
+    /* ========================================
+       MAIN TITLE
+       ======================================== */
 
     h1 {
-      font-size: clamp(48px, 6vw, 78px);
+      font-size: clamp(48px, 6vw, 80px);
       line-height: 1.05;
-      font-weight: 800;
-      letter-spacing: -2px;
 
-      margin-bottom: 25px;
+      font-weight: 900;
+
+      letter-spacing: -3px;
+
+      margin-bottom: 27px;
     }
 
     .amazing {
+      display: inline-block;
+
       background: linear-gradient(
         90deg,
         #00dfff 0%,
-        #168cff 30%,
-        #8d4cff 60%,
-        #ff1493 100%
+        #008fff 25%,
+        #6154ff 50%,
+        #a838e6 72%,
+        #ff008c 100%
       );
 
       -webkit-background-clip: text;
       background-clip: text;
+
       -webkit-text-fill-color: transparent;
       color: transparent;
     }
 
-    /* DESCRIPTION */
+    /* ========================================
+       DESCRIPTION
+       ======================================== */
 
     .description {
-      max-width: 850px;
+      width: 90%;
+      max-width: 900px;
 
-      color: #a9b1c2;
+      color: #aeb6c7;
 
       font-size: clamp(17px, 1.5vw, 21px);
-      line-height: 1.65;
+      font-weight: 400;
+
+      line-height: 1.7;
 
       margin-bottom: 38px;
     }
 
-    /* GRADIENT LINE */
+    /* ========================================
+       SMALL GRADIENT LINE
+       ======================================== */
 
     .gradient-line {
-      width: 115px;
+      width: 125px;
       height: 4px;
+
+      margin-bottom: 30px;
 
       border-radius: 20px;
 
       background: linear-gradient(
         90deg,
-        #00e5ff,
-        #5d7cff,
-        #ff1493
+        #00e5ff 0%,
+        #3877ff 40%,
+        #a342df 70%,
+        #ff008c 100%
       );
 
-      margin-bottom: 30px;
-
       box-shadow:
-        0 0 12px rgba(0, 229, 255, 0.25),
-        0 0 12px rgba(255, 20, 147, 0.20);
+        0 0 10px rgba(0, 229, 255, 0.25),
+        0 0 10px rgba(255, 0, 140, 0.20);
     }
 
-    /* STAY TUNED */
+    /* ========================================
+       STAY TUNED
+       ======================================== */
 
     .stay-tuned {
-      color: #9ca6ba;
+      color: #9da7bb;
 
       font-size: 16px;
-      letter-spacing: 8px;
+      font-weight: 400;
+
+      letter-spacing: 9px;
 
       margin-bottom: 55px;
     }
 
-    /* FOOTER */
+    /* ========================================
+       FOOTER
+       ======================================== */
 
     footer {
-      color: #6e778a;
+      color: #70798c;
+
       font-size: 14px;
+      font-weight: 400;
     }
 
-    /* MOBILE */
+    /* ========================================
+       MOBILE
+       ======================================== */
 
     @media (max-width: 768px) {
 
       .page {
-        padding: 25px 18px;
+        justify-content: flex-start;
+        padding-top: 35px;
       }
 
-      .logo-wrapper {
-        width: 150px;
-        height: 150px;
-        border-radius: 32px;
+      .logo {
+        width: 165px;
+        margin-bottom: 10px;
       }
 
       .brand {
-        font-size: 54px;
+        font-size: 58px;
         letter-spacing: -3px;
-        margin-bottom: 28px;
+        margin-bottom: 30px;
       }
 
       .badge {
-        min-width: 175px;
-        height: 43px;
+        min-width: 195px;
+        height: 45px;
+
         font-size: 13px;
         letter-spacing: 4px;
+
+        margin-bottom: 28px;
       }
 
       h1 {
-        font-size: 43px;
+        font-size: 44px;
+        letter-spacing: -2px;
       }
 
       .description {
+        width: 95%;
         font-size: 16px;
-        max-width: 600px;
       }
 
       .stay-tuned {
@@ -266,23 +300,29 @@
 
     @media (max-width: 480px) {
 
-      .logo-wrapper {
-        width: 125px;
-        height: 125px;
-        border-radius: 27px;
+      .page {
+        padding: 25px 15px;
+      }
+
+      .logo {
+        width: 135px;
       }
 
       .brand {
-        font-size: 44px;
+        font-size: 47px;
         letter-spacing: -2px;
       }
 
       h1 {
-        font-size: 36px;
+        font-size: 37px;
       }
 
       .description {
         font-size: 15px;
+      }
+
+      .gradient-line {
+        width: 95px;
       }
     }
 
@@ -293,39 +333,46 @@
 
   <main class="page">
 
-    <!-- BimoBond Logo -->
-    <div class="logo-wrapper">
-      <img src="logo.jpeg" alt="BimoBond Logo">
-    </div>
+    <!-- LOGO -->
+    <img
+      src="logo.jpeg"
+      alt="BimoBond Logo"
+      class="logo"
+    >
 
-    <!-- BimoBond -->
+    <!-- BIMOBOND -->
     <div class="brand">
-      <span class="bimo">Bimo</span><span class="bond">Bond</span>
+      BimoBond
     </div>
 
-    <!-- Coming Soon -->
+    <!-- COMING SOON -->
     <div class="badge">
       COMING SOON
     </div>
 
-    <!-- Main title -->
+    <!-- TITLE -->
     <h1>
-      Something <span class="amazing">Amazing</span><br>
+      Something
+      <span class="amazing">Amazing</span>
+      <br>
       Is Coming
     </h1>
 
-    <!-- Description -->
+    <!-- DESCRIPTION -->
     <p class="description">
       We're building a new social experience designed to bring people closer,
       share moments, and create meaningful connections.
     </p>
 
+    <!-- GRADIENT LINE -->
     <div class="gradient-line"></div>
 
+    <!-- STAY TUNED -->
     <div class="stay-tuned">
       STAY TUNED
     </div>
 
+    <!-- FOOTER -->
     <footer>
       © 2026 BimoBond. All rights reserved.
     </footer>
